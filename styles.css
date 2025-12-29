@@ -57,6 +57,7 @@ header {
   display: flex;
   gap: 20px;
   align-items: center;
+  background: transparent !important;
 }
 
 .nav-link {
@@ -74,34 +75,41 @@ header {
 }
 
 .rsvp-btn {
-  background: var(--accent-orange);
+  background: transparent;
   border: none;
-  padding: 10px 25px;
-  border-radius: 10px;
+  padding: 0;
+  border-radius: 16px;
   font-weight: 800;
-  color: white;
+  color: transparent;
   cursor: pointer;
   font-family: 'Baloo 2', cursive;
-  font-size: 1.3rem;
-  box-shadow: 0 4px 0 var(--accent-border);
-  transition: transform 0.1s;
+  font-size: 0;
+  letter-spacing: 0;
+  box-shadow: none;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  height: 60px;
+  transition: opacity 0.2s;
+}
+
+.rsvp-btn:hover {
+  opacity: 0.8;
 }
 
 .rsvp-btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 var(--accent-border);
+  opacity: 0.6;
 }
 
 .flame-icon {
   width: 50px;
   height: 50px;
-  background: var(--accent-orange);
+  /* background: var(--accent-orange); Removed per request */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -694,5 +702,10 @@ box-shadow: 0 2px 0 #cc7d30,
 
   .nav-link {
     font-size: 1rem;
+  }
+
+  .rsvp-btn {
+    max-width: 200px;
+    height: 50px;
   }
 }

@@ -81,21 +81,25 @@ header {
   border-radius: 16px;
   font-weight: 800;
   color: transparent;
-  cursor: pointer;
+  cursor: pointer !important;
   font-family: 'Baloo 2', cursive;
   font-size: 0;
   letter-spacing: 0;
   box-shadow: none;
   text-align: center;
   display: inline-block;
-  width: 100%;
-  max-width: 280px;
+  width: 280px;
   height: 60px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
   transition: opacity 0.2s;
 }
 
 .rsvp-btn:hover {
   opacity: 0.8;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .rsvp-btn:active {
@@ -103,8 +107,8 @@ header {
 }
 
 .flame-icon {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   /* background: var(--accent-orange); Removed per request */
   border-radius: 50%;
   display: flex;
